@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="julia.gui.MainController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="julia.gui.QuestionnaireController">
    <children>
       <GridPane layoutY="50.0" prefHeight="400.0" prefWidth="600.0">
         <columnConstraints>
@@ -288,7 +288,7 @@
             </VBox>
          </children>
       </GridPane>
-      <Label layoutX="-1.0" layoutY="6.0" prefHeight="46.0" prefWidth="266.0" text="Name of participant: ">
+      <Label fx:id="participantName" layoutX="-1.0" layoutY="6.0" prefHeight="46.0" prefWidth="600.0" text="Name of participant: ">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
@@ -309,13 +309,5 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Label fx:id="participantName" layoutX="265.0" layoutY="6.0" prefHeight="46.0" prefWidth="266.0">
-         <font>
-            <Font name="System Bold" size="25.0" />
-         </font>
-         <padding>
-            <Insets left="10.0" />
-         </padding>
-      </Label>
    </children>
 </AnchorPane>
