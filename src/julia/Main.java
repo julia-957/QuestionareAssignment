@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    public static Scene questionnaire;
+
     public static void main(String[] args){
         Application.launch();
     }
@@ -17,5 +19,9 @@ public class Main extends Application {
         Parent root = loader.load();
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setTitle("Questionnaire");
+
+        //creates a questionnare scene
+        questionnaire = new Scene(new FXMLLoader(getClass().getResource("/QuestionnaireWindow.fxml")).load());
     }
 }
