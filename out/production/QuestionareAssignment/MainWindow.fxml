@@ -7,8 +7,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="julia.gui.MainController">
     <children>
-        <Button fx:id="fillQuestionare" layoutX="252.0" layoutY="242.0"  onAction="#switchToQuestionare" text="Fill questionare" textAlignment="CENTER" />
-        <TextField layoutX="225.0" layoutY="166.0" />
+        <Button fx:id="fillQuestionnaire" layoutX="252.0" layoutY="242.0" mnemonicParsing="false" onAction="#switchToQuestionnaire" text="Fill questionnaire" textAlignment="CENTER" />
+        <TextField fx:id="nameInput" layoutX="225.0" layoutY="166.0" />
         <Label layoutX="225.0" layoutY="149.0" text="Name" />
     </children>
 </AnchorPane>
