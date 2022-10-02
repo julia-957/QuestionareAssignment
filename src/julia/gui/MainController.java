@@ -8,18 +8,24 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import julia.Main;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.util.ArrayList;
+
 public class MainController {
 
-    @FXML
-    private Button fillQuestionnaire;
+    private ArrayList<String> participantsList = new ArrayList<String>();
+    private ArrayList<Integer> participantsScore = new ArrayList<Integer>();
+
     @FXML
     private TextField nameInput;
+    @FXML
+    private ListView participants;
 
     @FXML
     private void switchToQuestionnaire(ActionEvent actionEvent) throws IOException {
@@ -36,6 +42,7 @@ public class MainController {
 
         //Pass whatever data we need to pass
         questionnaireController.passParticipantName(nameInput.getText());
+        participantsList.add(nameInput.getText());
 
         //Closes this window
         Node n = (Node) actionEvent.getSource();
@@ -47,5 +54,12 @@ public class MainController {
         stage.setScene(new Scene(root));
         stage.setTitle("Questionnaire");
         stage.show();
+    }
+
+    public void getSatisfaction(int satisfaction){
+        participantsScore.add(satisfaction);
+    }
+
+    public void updateParticipants(){
     }
 }

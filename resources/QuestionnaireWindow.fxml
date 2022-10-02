@@ -36,7 +36,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="disagree1" mnemonicParsing="false" onAction="#disagreeCount" text="Disagree">
+                        <RadioButton fx:id="disagree1" mnemonicParsing="false" text="Disagree">
                            <toggleGroup>
                               <ToggleGroup fx:id="question1" />
                            </toggleGroup></RadioButton>
@@ -44,12 +44,12 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="neutral1" mnemonicParsing="false" onAction="#neutralCount" text="Neutral" toggleGroup="$question1" />
+                        <RadioButton fx:id="neutral1" mnemonicParsing="false" text="Neutral" toggleGroup="$question1" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="agree1" mnemonicParsing="false" onAction="#agreeCount" text="Agree" toggleGroup="$question1" />
+                        <RadioButton fx:id="agree1" mnemonicParsing="false" text="Agree" toggleGroup="$question1" />
                      </children>
                   </VBox>
                </children>
@@ -58,7 +58,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="disagree2" mnemonicParsing="false" onAction="#disagreeCount" text="Disagree">
+                        <RadioButton fx:id="disagree2" mnemonicParsing="false" text="Disagree">
                            <toggleGroup>
                               <ToggleGroup fx:id="question2" />
                            </toggleGroup></RadioButton>
@@ -66,12 +66,12 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="neutral2" mnemonicParsing="false" onAction="#neutralCount" text="Neutral" toggleGroup="$question2" />
+                        <RadioButton fx:id="neutral2" mnemonicParsing="false" text="Neutral" toggleGroup="$question2" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="agree2" mnemonicParsing="false" onAction="#agreeCount" text="Agree" toggleGroup="$question2" />
+                        <RadioButton fx:id="agree2" mnemonicParsing="false" text="Agree" toggleGroup="$question2" />
                      </children>
                   </VBox>
                </children>
@@ -80,7 +80,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="disagree3" mnemonicParsing="false" onAction="#disagreeCount" text="Disagree">
+                        <RadioButton fx:id="disagree3" mnemonicParsing="false" text="Disagree">
                            <toggleGroup>
                               <ToggleGroup fx:id="question3" />
                            </toggleGroup></RadioButton>
@@ -88,12 +88,12 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="neutral3" mnemonicParsing="false" onAction="#neutralCount" text="Neutral" toggleGroup="$question3" />
+                        <RadioButton fx:id="neutral3" mnemonicParsing="false" text="Neutral" toggleGroup="$question3" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="agree3" mnemonicParsing="false" onAction="#agreeCount" text="Agree" toggleGroup="$question3" />
+                        <RadioButton fx:id="agree3" mnemonicParsing="false" text="Agree" toggleGroup="$question3" />
                      </children>
                   </VBox>
                </children>
@@ -102,7 +102,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="disagree4" mnemonicParsing="false" onAction="#disagreeCount" text="Disagree">
+                        <RadioButton fx:id="disagree4" mnemonicParsing="false" text="Disagree">
                            <toggleGroup>
                               <ToggleGroup fx:id="question4" />
                            </toggleGroup></RadioButton>
@@ -110,12 +110,12 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="neutral4" mnemonicParsing="false" onAction="#neutralCount" text="Neutral" toggleGroup="$question4" />
+                        <RadioButton fx:id="neutral4" mnemonicParsing="false" text="Neutral" toggleGroup="$question4" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="agree4" mnemonicParsing="false" onAction="#agreeCount" text="Agree" toggleGroup="$question4" />
+                        <RadioButton fx:id="agree4" mnemonicParsing="false" text="Agree" toggleGroup="$question4" />
                      </children>
                   </VBox>
                </children>
@@ -124,7 +124,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="disagree5" mnemonicParsing="false" onAction="#disagreeCount" text="Disagree">
+                        <RadioButton fx:id="disagree5" mnemonicParsing="false" text="Disagree">
                            <toggleGroup>
                               <ToggleGroup fx:id="question5" />
                            </toggleGroup></RadioButton>
@@ -132,12 +132,12 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="neutral5" mnemonicParsing="false" onAction="#neutralCount" text="Neutral" toggleGroup="$question5" />
+                        <RadioButton fx:id="neutral5" mnemonicParsing="false" text="Neutral" toggleGroup="$question5" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="agree5" mnemonicParsing="false" onAction="#agreeCount" text="Agree" toggleGroup="$question5" />
+                        <RadioButton fx:id="agree5" mnemonicParsing="false" text="Agree" toggleGroup="$question5" />
                      </children>
                   </VBox>
                </children>
@@ -146,7 +146,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="disagree6" mnemonicParsing="false" onAction="#disagreeCount" text="Disagree">
+                        <RadioButton fx:id="disagree6" mnemonicParsing="false" text="Disagree">
                            <toggleGroup>
                               <ToggleGroup fx:id="question6" />
                            </toggleGroup></RadioButton>
@@ -154,12 +154,12 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="neutral6" mnemonicParsing="false" onAction="#neutralCount" text="Neutral" toggleGroup="$question6" />
+                        <RadioButton fx:id="neutral6" mnemonicParsing="false" text="Neutral" toggleGroup="$question6" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="agree6" mnemonicParsing="false" onAction="#agreeCount" text="Agree" toggleGroup="$question6" />
+                        <RadioButton fx:id="agree6" mnemonicParsing="false" text="Agree" toggleGroup="$question6" />
                      </children>
                   </VBox>
                </children>
@@ -168,7 +168,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="disagree7" mnemonicParsing="false" onAction="#disagreeCount" text="Disagree">
+                        <RadioButton fx:id="disagree7" mnemonicParsing="false" text="Disagree">
                            <toggleGroup>
                               <ToggleGroup fx:id="question7" />
                            </toggleGroup></RadioButton>
@@ -176,12 +176,12 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="neutral7" mnemonicParsing="false" onAction="#neutralCount" text="Neutral" toggleGroup="$question7" />
+                        <RadioButton fx:id="neutral7" mnemonicParsing="false" text="Neutral" toggleGroup="$question7" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="agree7" mnemonicParsing="false" onAction="#agreeCount" text="Agree" toggleGroup="$question7" />
+                        <RadioButton fx:id="agree7" mnemonicParsing="false" text="Agree" toggleGroup="$question7" />
                      </children>
                   </VBox>
                </children>
@@ -190,7 +190,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="disagree8" mnemonicParsing="false" onAction="#disagreeCount" text="Disagree">
+                        <RadioButton fx:id="disagree8" mnemonicParsing="false" text="Disagree">
                            <toggleGroup>
                               <ToggleGroup fx:id="question8" />
                            </toggleGroup></RadioButton>
@@ -198,12 +198,12 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="neutral8" mnemonicParsing="false" onAction="#neutralCount" text="Neutral" toggleGroup="$question8" />
+                        <RadioButton fx:id="neutral8" mnemonicParsing="false" text="Neutral" toggleGroup="$question8" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="agree8" mnemonicParsing="false" onAction="#agreeCount" text="Agree" toggleGroup="$question8" />
+                        <RadioButton fx:id="agree8" mnemonicParsing="false" text="Agree" toggleGroup="$question8" />
                      </children>
                   </VBox>
                </children>
@@ -212,7 +212,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="disagree9" mnemonicParsing="false" onAction="#disagreeCount" text="Disagree">
+                        <RadioButton fx:id="disagree9" mnemonicParsing="false" text="Disagree">
                            <toggleGroup>
                               <ToggleGroup fx:id="question9" />
                            </toggleGroup></RadioButton>
@@ -220,12 +220,12 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="neutral9" mnemonicParsing="false" onAction="#neutralCount" text="Neutral" toggleGroup="$question9" />
+                        <RadioButton fx:id="neutral9" mnemonicParsing="false"  text="Neutral" toggleGroup="$question9" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="agree9" mnemonicParsing="false" onAction="#agreeCount" text="Agree" toggleGroup="$question9" />
+                        <RadioButton fx:id="agree9" mnemonicParsing="false" text="Agree" toggleGroup="$question9" />
                      </children>
                   </VBox>
                </children>
