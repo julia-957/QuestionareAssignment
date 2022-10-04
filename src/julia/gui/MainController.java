@@ -6,29 +6,34 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.ComboBoxListCell;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import julia.Main;
+import julia.models.History;
 
 import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class MainController {
-
-    private ArrayList<String> participantsList = new ArrayList<String>();
-    private ArrayList<Integer> participantsScore = new ArrayList<Integer>();
-
     @FXML
     private TextField nameInput;
     @FXML
     private ListView participants;
+    History participantHistory;
+
+    public void initialize(){
+        //get model
+        participantHistory = new History();
+    }
 
     @FXML
     private void switchToQuestionnaire(ActionEvent actionEvent) throws IOException {
+        participantHistory.addToParticipants(nameInput.getText());
 
         //Loading the questionnaire and getting an instance of the controller
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/QuestionnaireWindow.fxml"));
@@ -41,8 +46,8 @@ public class MainController {
         questionnaireController.setParentController(this);
 
         //Pass whatever data we need to pass
-        questionnaireController.passParticipantName(nameInput.getText());
-        participantsList.add(nameInput.getText());
+        questionnaireController.setModel(participantHistory);
+        questionnaireController.setParticipantName();
 
         //Closes this window
         Node n = (Node) actionEvent.getSource();
@@ -53,13 +58,20 @@ public class MainController {
         stage = new Stage();
         stage.setScene(new Scene(root));
         stage.setTitle("Questionnaire");
+        stage.initModality(Modality.WINDOW_MODAL);
         stage.show();
     }
 
     public void getSatisfaction(int satisfaction){
-        participantsScore.add(satisfaction);
+        //participantsList.put(participant,satisfaction);
     }
 
+    @FXML
     public void updateParticipants(){
+        participants.setItems(this.participantHistory.getParticipants());
+    }
+
+    public void setModel(History participantHistory){
+        this.participantHistory = participantHistory;
     }
 }

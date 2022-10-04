@@ -17,7 +17,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/MainWindow.fxml"));
         Parent root = loader.load();
         primaryStage.setScene(new Scene(root));
-        primaryStage.show();
         primaryStage.setTitle("Questionnaire");
+        primaryStage.show();
     }
 }
