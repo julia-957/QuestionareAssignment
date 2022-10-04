@@ -220,7 +220,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="neutral9" mnemonicParsing="false"  text="Neutral" toggleGroup="$question9" />
+                        <RadioButton fx:id="neutral9" mnemonicParsing="false" text="Neutral" toggleGroup="$question9" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
@@ -324,7 +324,7 @@
             <Insets left="10.0" />
          </padding>
       </Label>
-      <Label layoutX="379.0" layoutY="450.0" prefHeight="46.0" prefWidth="221.0" text="Score:">
+      <Label fx:id="scoreLabel" layoutX="379.0" layoutY="450.0" prefHeight="46.0" prefWidth="221.0" text="Score:">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>

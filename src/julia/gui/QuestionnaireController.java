@@ -12,49 +12,32 @@ import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import julia.models.History;
 
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class QuestionnaireController {
     private MainController mainController;
-    private int disagreeCount = 0;
-    private int neutralCount = 0;
-    private int agreeCount = 0;
+    History participantHistory;
+    private String participant;
     private int satisfaction = 0;
     private RadioButton[] disagree = new RadioButton[9];
     private RadioButton[] neutral = new RadioButton[9];
     private RadioButton[] agree = new RadioButton[9];
 
+    @FXML
+    private Label participantName;
+    @FXML
+    private Label scoreLabel;
 
     @FXML
     public void setParentController(MainController mainController){
         this.mainController = mainController;
     }
-
-    @FXML
-    private Label participantName;
-
-    @FXML
-    private ToggleGroup question1;
-    @FXML
-    private ToggleGroup question2;
-    @FXML
-    private ToggleGroup question3;
-    @FXML
-    private ToggleGroup question4;
-    @FXML
-    private ToggleGroup question5;
-    @FXML
-    private ToggleGroup question6;
-    @FXML
-    private ToggleGroup question7;
-    @FXML
-    private ToggleGroup question8;
-    @FXML
-    private ToggleGroup question9;
 
     //instantiate all disagree buttons
     @FXML
@@ -116,6 +99,10 @@ public class QuestionnaireController {
     @FXML
     private RadioButton agree9;
 
+    public void initialize(){
+        participantHistory = new History();
+    }
+
     public void addToArrays(){
         disagree[0] = disagree1;
         disagree[1] = disagree2;
@@ -137,7 +124,7 @@ public class QuestionnaireController {
         neutral[7] = neutral8;
         neutral[8] = neutral9;
 
-        agree[0] = disagree1;
+        agree[0] = agree1;
         agree[1] = agree2;
         agree[2] = agree3;
         agree[3] = agree4;
@@ -148,27 +135,22 @@ public class QuestionnaireController {
         agree[8] = agree9;
     }
 
-    @FXML
-    public void passParticipantName(String participant){
+    public void setParticipantName(){
+        this.participant = participantHistory.getParticipants().get(0);
         participantName.setText("Name of participant: " + participant);
     }
 
     public void calculateScore(ActionEvent actionEvent) {
         addToArrays();
-
         for (int i = 0; i<9; i++){
             if (disagree[i].isSelected()){
-                disagreeCount++;
+                satisfaction--;
             }
-            else if (neutral[i].isSelected()){
-                neutralCount++;
-            }
-            else{
-                agreeCount++;
+            else if (agree[i].isSelected()) {
+                satisfaction++;
             }
         }
-
-        satisfaction = disagreeCount*-1 + neutralCount*0 + agreeCount;
+        scoreLabel.setText("Score: " + satisfaction);
     }
 
     //Save score and send it to the MainWindow
@@ -177,9 +159,12 @@ public class QuestionnaireController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/MainWindow.fxml"));
         Parent root = loader.load();
         MainController mainController = loader.getController();
+        mainController.setModel(participantHistory);
+
 
         //Pass data
-        mainController.getSatisfaction(satisfaction);
+        //mainController.getSatisfaction(satisfaction);
+        mainController.updateParticipants();
 
         //Close this window and open the main one
         Node n = (Node) actionEvent.getSource();
@@ -187,6 +172,12 @@ public class QuestionnaireController {
         stage.close();
         stage = new Stage();
         stage.setScene(new Scene(root));
+        stage.setTitle("Questionnaire");
+        stage.initModality(Modality.WINDOW_MODAL);
         stage.show();
+    }
+
+    public void setModel(History participantHistory) {
+        this.participantHistory = participantHistory;
     }
 }

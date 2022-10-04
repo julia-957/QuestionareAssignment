@@ -18,11 +18,11 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
-      <ListView fx:id="participants" layoutX="332.0" layoutY="56.0" prefHeight="310.0" prefWidth="231.0" />
       <Label layoutX="332.0" layoutY="34.0" text="Participants">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
+      <ListView fx:id="participants" layoutX="332.0" layoutY="62.0" prefHeight="290.0" prefWidth="215.0" />
     </children>
 </AnchorPane>
