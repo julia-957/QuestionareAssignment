@@ -25,6 +25,8 @@ public class QuestionnaireController {
     History participantHistory;
     private String participant;
     private int satisfaction = 0;
+    private int disagreeCount = 0;
+    private int agreeCount = 0;
     private RadioButton[] disagree = new RadioButton[9];
     private RadioButton[] neutral = new RadioButton[9];
     private RadioButton[] agree = new RadioButton[9];
@@ -101,6 +103,7 @@ public class QuestionnaireController {
 
     public void initialize(){
         participantHistory = new History();
+        scoreLabel.setText("Score: " + satisfaction);
     }
 
     public void addToArrays(){
@@ -136,7 +139,7 @@ public class QuestionnaireController {
     }
 
     public void setParticipantName(){
-        this.participant = participantHistory.getParticipants().get(0);
+        this.participant = participantHistory.getParticipants().get(participantHistory.getParticipantsLength()-1);
         participantName.setText("Name of participant: " + participant);
     }
 
@@ -149,8 +152,11 @@ public class QuestionnaireController {
             else if (agree[i].isSelected()) {
                 satisfaction++;
             }
+
+        //satisfaction = disagreeCount*-1 + agreeCount;
         }
         scoreLabel.setText("Score: " + satisfaction);
+        participantHistory.addScoreToParticipant(participant, satisfaction);
     }
 
     //Save score and send it to the MainWindow
@@ -161,7 +167,6 @@ public class QuestionnaireController {
         MainController mainController = loader.getController();
         mainController.setModel(participantHistory);
 
-
         //Pass data
         //mainController.getSatisfaction(satisfaction);
         mainController.updateParticipants();
@@ -170,10 +175,8 @@ public class QuestionnaireController {
         Node n = (Node) actionEvent.getSource();
         Stage stage = (Stage) n.getScene().getWindow();
         stage.close();
-        stage = new Stage();
         stage.setScene(new Scene(root));
         stage.setTitle("Questionnaire");
-        stage.initModality(Modality.WINDOW_MODAL);
         stage.show();
     }
 
