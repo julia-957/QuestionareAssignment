@@ -55,10 +55,8 @@ public class MainController {
         stage.close();
 
         //Show QuestionnaireWindow in a new window
-        stage = new Stage();
         stage.setScene(new Scene(root));
         stage.setTitle("Questionnaire");
-        stage.initModality(Modality.WINDOW_MODAL);
         stage.show();
     }
 
