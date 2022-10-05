@@ -9,20 +9,20 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="julia.gui.MainController">
     <children>
-        <Button fx:id="fillQuestionnaire" layoutX="101.0" layoutY="224.0" mnemonicParsing="false" onAction="#switchToQuestionnaire" text="Fill questionnaire" textAlignment="CENTER">
+        <Button fx:id="fillQuestionnaire" layoutX="101.0" layoutY="224.0" mnemonicParsing="false" onAction="#switchToQuestionnaire" text="Fill questionnaire" textAlignment="CENTER" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="220.0">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>
-        <TextField fx:id="nameInput" layoutX="88.0" layoutY="162.0" />
-        <Label layoutX="92.0" layoutY="140.0" text="Name:">
+        <TextField fx:id="nameInput" layoutX="88.0" layoutY="162.0" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="160.0" />
+        <Label layoutX="92.0" layoutY="140.0" text="Name:" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="140.0">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
-      <Label layoutX="332.0" layoutY="34.0" text="Participants">
+      <Label layoutX="332.0" layoutY="34.0" text="Participants" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="35.0">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <ListView fx:id="participants" layoutX="332.0" layoutY="62.0" prefHeight="290.0" prefWidth="215.0" />
+      <ListView fx:id="participants" layoutX="332.0" layoutY="62.0" prefHeight="290.0" prefWidth="215.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="60.0" />
     </children>
 </AnchorPane>

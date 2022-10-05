@@ -15,15 +15,13 @@ public class History {
     }
 
     public void addScoreToParticipant(String participant, Integer score){
-        for (String oneOfTheParticipants: this.participants)
-              {
-                  int i = 0;
-                  while (i < participants.size()-1){
-                      if (oneOfTheParticipants.contains(participant)){
-                          this.participants.remove(oneOfTheParticipants);
-                          i++;
-                      }
-                  }
+        int i = 0;
+        while (i < participants.size()-1){
+            String oneOfTheParticipants = participants.get(i);
+            if (oneOfTheParticipants.contains(participant)){
+                this.participants.remove(oneOfTheParticipants);
+            }
+            i++;
         }
         int location = this.participants.indexOf(participant);
         this.participants.remove(participant);
